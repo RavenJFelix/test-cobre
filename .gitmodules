@@ -1,0 +1,3 @@
+[submodule "lib/cobre"]
+	path = lib/cobre
+	url = /home/raven/Documents/Github/cobre/
