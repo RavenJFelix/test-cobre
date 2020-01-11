@@ -5,3 +5,4 @@ add_subdirectory(main)
 set(sources
 	${sources}
 	PARENT_SCOPE)
+
