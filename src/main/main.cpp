@@ -1,6 +1,5 @@
 #include "CobreDef.h"
 #include "Pixel.h"
-#include "Pos2D.h"
 #include "Canvas.h"
 
 #include <iostream>
