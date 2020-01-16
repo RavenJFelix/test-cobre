@@ -7,7 +7,9 @@
 
 int main()
 {
+
 	using pixel_t = cobre::core::Pixel;
+	cobre::core::Canvas canv{10,10};
 	using cPos_t = cobre::core::canvasPos_t;
 	cobre::core::PixelBuffer buffer{8};
 	pixel_t f{cPos_t{0, 0}, 'F'};
@@ -18,17 +20,20 @@ int main()
 	pixel_t o{cPos_t{1, 0}, 'O', 1};
 	pixel_t t{cPos_t{2, 0}, 'T', 1};
 	pixel_t e{cPos_t{3, 0}, 'E', 1};
-
-	buffer[0] = y;
-	buffer[1] = o;
-	buffer[2] = t;
-	buffer[3] = e;
-	buffer[4] = f;
-	buffer[5] = u;
-	buffer[6] = c;
-	buffer[7] = k;
+	
+	buffer << y;
+	buffer << o;
+	buffer << t;
+	buffer << e;
+	buffer << f;
+	buffer << u;
+	buffer << c;
+	buffer << k;
 
 	buffer.zSort();
+	canv << buffer;
+	std::cout << canv;
+
 
 	
 	return 0;
