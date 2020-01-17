@@ -29,10 +29,19 @@ int main()
 	buffer << u;
 	buffer << c;
 	buffer << k;
+        
+        cobre::core::PixelBuffer in;
+        
+        
 
-	buffer.zSort();
+        buffer.zSort();
+        
 	canv << buffer;
 	std::cout << canv;
+        canv.clear();
+        in << buffer;
+        canv << in;
+        std::cout << canv;
 
 
 	
