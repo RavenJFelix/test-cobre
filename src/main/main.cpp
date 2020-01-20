@@ -33,9 +33,11 @@ int main()
 	
 
         cobre::core::Rengine reng{10, 10};
+        reng.resize(30, 40);
         reng << buffer;
         reng.render();
         std::cout << reng;
+        std::cout << reng.size().x << reng.size().y;
 
 	return 0;
 }
