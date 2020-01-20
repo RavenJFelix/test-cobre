@@ -2,6 +2,7 @@
 #include "Pixel.h"
 #include "PixelBuffer.h"
 #include "Canvas.h"
+#include "Rengine.h"
 
 #include <iostream>
 
@@ -29,21 +30,11 @@ int main()
 	buffer << u;
 	buffer << c;
 	buffer << k;
-        
-        cobre::core::PixelBuffer in;
-        
-        
-
-        buffer.zSort();
-        
-	canv << buffer;
-	std::cout << canv;
-        canv.clear();
-        in << buffer;
-        canv << in;
-        std::cout << canv;
-
-
 	
+
+        cobre::core::Rengine reng{10, 10};
+        reng << buffer;
+        std::cout << reng;
+
 	return 0;
 }
