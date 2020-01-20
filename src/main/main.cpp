@@ -34,6 +34,7 @@ int main()
 
         cobre::core::Rengine reng{10, 10};
         reng << buffer;
+        reng.render();
         std::cout << reng;
 
 	return 0;
